@@ -4,7 +4,7 @@ package org.ff4j.strategy.time;
  * #%L
  * ff4j-core
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -110,9 +110,9 @@ public final class HourInterval {
    /**
     * Initialization by dates
     *
-    * @param from
+    * @param f
     *      lower bound
-    * @param to
+    * @param t
     *      uppoer bound
     */
    public void init(String f, String t) {

@@ -4,7 +4,7 @@ package org.ff4j.strategy;
  * #%L
  * ff4j-core
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public class ClientFilterStrategy extends AbstractFlipStrategy {
     /** Serial. */
     private static final long serialVersionUID = -485058682902446581L;
 
-    /** Threshold. */
+    /** initial parameter. */
     private static final String PARAM_CLIENTLIST = "grantedClients";
 
     /** Parameter to be checked in context. */
@@ -61,8 +61,8 @@ public class ClientFilterStrategy extends AbstractFlipStrategy {
     /**
      * Parameterized constructor.
      * 
-     * @param threshold
-     *            threshold
+     * @param clientList
+     *            clientList
      */
     public ClientFilterStrategy(String clientList) {
         this.rawClientList = clientList;

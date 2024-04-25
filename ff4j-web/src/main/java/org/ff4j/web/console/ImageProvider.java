@@ -4,7 +4,7 @@ package org.ff4j.web.console;
  * #%L
  * ff4j-web
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ package org.ff4j.web.console;
  */
 
 
+import jakarta.xml.bind.DatatypeConverter;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -30,7 +31,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
-import javax.xml.bind.DatatypeConverter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

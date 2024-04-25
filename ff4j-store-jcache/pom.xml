@@ -13,7 +13,7 @@
   <parent>
     <groupId>org.ff4j</groupId>
     <artifactId>ff4j-parent</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.2-SNAPSHOT</version>
   </parent>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <!-- ~      PROPERTIES          ~ -->
@@ -22,7 +22,7 @@
     <license.licenseResolver>${project.baseUri}/../src/license</license.licenseResolver>
     <ignite.version>1.4.0</ignite.version>
     <ehcache.version>3.8.1</ehcache.version>
-    <jsr107.version>1.0.0</jsr107.version>
+    <jsr107.version>1.1.1</jsr107.version>
     <hazelcast.version>5.3.0</hazelcast.version>
     <version.cache-api>1.1.1</version.cache-api>
   </properties>

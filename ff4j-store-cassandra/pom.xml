@@ -12,14 +12,14 @@
   <parent>
     <groupId>org.ff4j</groupId>
     <artifactId>ff4j-parent</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.2-SNAPSHOT</version>
   </parent>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <!-- ~      PROPERTIES          ~ -->
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   <properties>
     <license.licenseResolver>${project.baseUri}/../src/license</license.licenseResolver>
-    <cassandra-java-driver.version>4.15.0</cassandra-java-driver.version>
+    <cassandra-java-driver.version>4.17.0</cassandra-java-driver.version>
     <version.cassandra.unit>4.3.1.0</version.cassandra.unit>
     <testcontainers.version>1.14.3</testcontainers.version>
   </properties>

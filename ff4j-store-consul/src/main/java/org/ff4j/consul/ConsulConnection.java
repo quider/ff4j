@@ -4,7 +4,7 @@ package org.ff4j.consul;
  * #%L
  * ff4j-store-consul
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -170,8 +170,8 @@ public class ConsulConnection implements KeyValueDriver< String, String > {
     /** {@inheritDoc} */
     @Override
     public String getValue(String key) {
-        Optional<String> keyValue = getKeyValueClient().getValueAsString(key);
-        if (!keyValue.isPresent()) {
+        var keyValue = getKeyValueClient().getValueAsString(key);
+        if (keyValue.isEmpty()) {
             throw new IllegalArgumentException("Cannot read key '" + key + "' from consul. This error might error if you "
                     + "remove the KEY from consul without editing FF4J/FEATURES_DICTIONARY.");
         }
@@ -200,9 +200,9 @@ public class ConsulConnection implements KeyValueDriver< String, String > {
     /** {@inheritDoc} */
     @Override
     public Set<String> getFeatureList() {
-        Optional < String> listFeatures = getKeyValueClient().getValueAsString(keyBuilder.getFeaturesDictionaryKey());
-        if (!listFeatures.isPresent()) return new HashSet<>();
-        return new HashSet<>(Arrays.asList(listFeatures.get().split(DICTIONARY_SEPARATOR)));
+        var listFeatures = getKeyValueClient().getValueAsString(keyBuilder.getFeaturesDictionaryKey());
+      return listFeatures.map(s -> new HashSet<>(Arrays.asList(s.split(DICTIONARY_SEPARATOR))))
+          .orElseGet(HashSet::new);
     }
     
     /** {@inheritDoc} */
@@ -239,10 +239,9 @@ public class ConsulConnection implements KeyValueDriver< String, String > {
     /** {@inheritDoc} */
     @Override
     public Set<String> getPropertyList() {
-        Optional < String> listProperties = getKeyValueClient().getValueAsString(keyBuilder.getPropertiesDictionaryKey());
-        if (!listProperties.isPresent())  return new HashSet<>();
-        return new HashSet<>(Arrays.asList(
-                listProperties.get().split(DICTIONARY_SEPARATOR)));
+        var listProperties = getKeyValueClient().getValueAsString(keyBuilder.getPropertiesDictionaryKey());
+      return listProperties.map(s -> new HashSet<>(Arrays.asList(
+          s.split(DICTIONARY_SEPARATOR)))).orElseGet(HashSet::new);
     }
     
     /** {@inheritDoc} */

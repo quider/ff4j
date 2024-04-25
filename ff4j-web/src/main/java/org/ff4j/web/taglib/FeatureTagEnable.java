@@ -4,7 +4,7 @@ package org.ff4j.web.taglib;
  * #%L
  * ff4j-web
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,5 +62,4 @@ public class FeatureTagEnable extends AbstractFeatureTag {
     protected boolean evalWithExecutionContext(FF4j ff4j, PageContext pageContext, FlippingExecutionContext executionContext) {
         return ff4j.check(getFeatureid(), executionContext);
     }
-
 }

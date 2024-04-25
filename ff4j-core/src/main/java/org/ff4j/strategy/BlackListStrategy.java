@@ -4,7 +4,7 @@ package org.ff4j.strategy;
  * #%L
  * ff4j-core
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.ff4j.core.FeatureStore;
 import org.ff4j.core.FlippingExecutionContext;
 
 /**
- * BLOCK acces for defined list of Clients.
+ * BLOCK access for defined list of Clients.
  *
  * @author Cedrick Lunven (@clunven)
  */
@@ -43,8 +43,8 @@ public class BlackListStrategy extends ClientFilterStrategy {
     /**
      * Parameterized constructor.
      * 
-     * @param threshold
-     *            threshold
+     * @param clientList
+     *            clientList
      */
     public BlackListStrategy(String clientList) {
         super(clientList);

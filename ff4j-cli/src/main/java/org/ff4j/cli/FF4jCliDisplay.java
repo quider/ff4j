@@ -4,7 +4,7 @@ package org.ff4j.cli;
  * #%L
  * ff4j-cli
  * %%
- * Copyright (C) 2013 - 2023 FF4J
+ * Copyright (C) 2013 - 2024 FF4J
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.ff4j.FF4j;
 import org.ff4j.cli.ansi.AnsiForegroundColor;
 import org.ff4j.cli.ansi.AnsiTerminal;
